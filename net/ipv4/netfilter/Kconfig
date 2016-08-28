@@ -263,6 +263,15 @@ config IP_NF_TARGET_SYNPROXY
 
 	  To compile it as a module, choose M here. If unsure, say N.
 
+config IP_NF_TARGET_DF
+	tristate "DF target support"
+	default m if NETFILTER_ADVANCED=n
+	help
+	  This option adds a `DF' target, allowing you to set or remove
+	  "Do not fragment" flag on any traffic in mangle table.
+
+	  To compile it as a module, choose M here.  If unsure, say N.
+
 # NAT + specific targets: nf_conntrack
 config IP_NF_NAT
 	tristate "iptables NAT support"
