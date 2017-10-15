@@ -2,14 +2,9 @@
 
 **pf-kernel** is yet another Linux kernel fork which provides you with a handful of awesome features not merged into mainline. It is based on neither existing Linux fork nor patchset, although some unofficial ports may be used if required patches haven't been released officially. The name of the fork is by **no means** related to BSD Packet Filter. «pf» stands for «post-factum», the author's nickname.
 
-# How to get it?
+# OK, what's there in your patchset?
 
-Latest release is: v4.13-pf9
-
-* tarball: [click](https://github.com/pfactum/pf-kernel/archive/v4.13-pf9.tar.gz)
-* patch: [click](https://github.com/pfactum/pf-kernel/compare/569dbb88e80deb68974ef6fdd6a13edb9d686261...v4.13-pf9.diff) (_applies to bare kernel only with **no stable patches**_)
-
-# What's there?
+Currently, pf-kernel incorporates:
 
 * [stable kernel update](https://git.kernel.org/cgit/linux/kernel/git/stable/linux-stable.git/)
 * [PDS CPU scheduler](https://cchalpha.blogspot.com/)
@@ -19,7 +14,38 @@ Latest release is: v4.13-pf9
 * [blk-mq suspend-to-RAM fix](https://marc.info/?l=linux-block&m=150675195718390&w=2)
 * random fixes here and there
 
-# I have an idea!
+# How to get it?
+
+Latest release is: v4.13-pf9
+
+* patch: [click](https://github.com/pfactum/pf-kernel/compare/569dbb88e80deb68974ef6fdd6a13edb9d686261...v4.13-pf9.diff) (_applies to bare kernel only with **no stable patches**_)
+* tarball: [click](https://github.com/pfactum/pf-kernel/archive/v4.13-pf9.tar.gz)
+
+## But I want binary builds!
+
+There are Arch Linux official binaries available for some architectures (_64-bit only_):
+
+* [generic](https://build.opensuse.org/package/show/home:post-factum/linux-pf-generic)
+* [Intel Silvermont](https://build.opensuse.org/package/show/home:post-factum/linux-pf-silvermont)
+* [Intel Skylake](https://build.opensuse.org/package/show/home:post-factum/linux-pf-skylake)
+
+### Where is Fedora, Gentoo etc?
+
+Some unofficial packages are maintainer here:
+
+* [Gentoo](http://packages.gentoo.org/package/sys-kernel/pf-sources)
+* Fedora [specs](https://github.com/Hubbitus/kernel) and [binaries](http://rpm.hubbitus.info/)
+
+Please don't ask me to fix or update them, I just host some links. But if you know that some other distributions also support pf-kernel, let me know.
+
+#### I saw linux-pf package in AUR, is it supported?
+
+No, since it is maintained by other people. But I still leave some links to it here:
+
+* [linux-pf](https://aur.archlinux.org/packages/linux-pf) with some enhancements
+* [linux-pf-lts](https://aur.archlinux.org/packages/linux-pf-lts) if you are too lazy to use latest version
+
+# I still have some idea for improvement!
 
 Please, [let me know](mailto:oleksandr@natalenko.name).
 
