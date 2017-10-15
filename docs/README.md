@@ -1,6 +1,6 @@
 # What is this?
 
-**pf-kernel** is yet another Linux kernel fork which provides you with a handful of awesome features not merged into mainline. It is based on neither existing Linux fork nor patchset, although some unofficial ports may be used if required patches haven't been released officially. The name of the fork is by **no means** related to BSD Packet Filter. «pf» stands for «post-factum», the author's nickname.
+**pf-kernel** is a desktop-oriented Linux kernel fork. Its name is by **no means** related to BSD Packet Filter. "pf" stands for "post-factum", the author's nickname.
 
 # OK, what's there in your patchset?
 
@@ -14,9 +14,11 @@ Currently, pf-kernel incorporates:
 * [blk-mq suspend-to-RAM fix](https://marc.info/?l=linux-block&m=150675195718390&w=2)
 * random fixes here and there
 
+As you may see, it improves interactiveness and performance, saves some memory and fixes nasty bugs.
+
 # How to get it?
 
-Latest release is: v4.13-pf9
+Latest release is: **v4.13-pf9**
 
 * patch: [click](https://github.com/pfactum/pf-kernel/compare/569dbb88e80deb68974ef6fdd6a13edb9d686261...v4.13-pf9.diff) (_applies to bare kernel only with **no stable patches**_)
 * tarball: [click](https://github.com/pfactum/pf-kernel/archive/v4.13-pf9.tar.gz)
@@ -45,7 +47,7 @@ No, since it is maintained by other people. But I still leave some links to it h
 * [linux-pf](https://aur.archlinux.org/packages/linux-pf) with some enhancements
 * [linux-pf-lts](https://aur.archlinux.org/packages/linux-pf-lts) if you are too lazy to use latest version
 
-# I still have some idea for improvement!
+# I have some idea for you!
 
 Please, [let me know](mailto:oleksandr@natalenko.name).
 
