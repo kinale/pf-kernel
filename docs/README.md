@@ -23,6 +23,8 @@ Latest release is: **v4.13-pf9**
 * patch: [click](https://github.com/pfactum/pf-kernel/compare/569dbb88e80deb68974ef6fdd6a13edb9d686261...v4.13-pf9.diff) (_applies to bare kernel only with **no stable patches**_)
 * tarball: [click](https://github.com/pfactum/pf-kernel/archive/v4.13-pf9.tar.gz)
 
+You can also check [full list of all releases](releases).
+
 ## But I want binary builds!
 
 There are Arch Linux official binaries available for some architectures (_64-bit only_):
