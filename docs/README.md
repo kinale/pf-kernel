@@ -9,7 +9,7 @@ Currently, pf-kernel incorporates:
 * [stable kernel update](https://git.kernel.org/cgit/linux/kernel/git/stable/linux-stable.git/)
 * [PDS CPU scheduler](https://cchalpha.blogspot.com/)
 * [graysky's GCC patch](https://github.com/graysky2/kernel_gcc_patch)
-* [UKSM](http://kerneldedup.org/en/projects/uksm/)
+* [UKSM](http://kerneldedup.org/en/projects/uksm/) (_also, on [GitHub](https://github.com/dolohow/uksm)_)
 * [blk-mq performance patchset](https://marc.info/?l=linux-block&m=150797307912556&w=2)
 * [blk-mq suspend-to-RAM fix](https://marc.info/?l=linux-block&m=150675195718390&w=2)
 * random fixes here and there
