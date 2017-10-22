@@ -22,7 +22,7 @@ Latest release is: [v4.13-pf9](https://github.com/pfactum/pf-kernel/releases/lat
 
 You can also check [full list of all releases](https://github.com/pfactum/pf-kernel/releases).
 
-To get a specific patch, use the following template:
+To get a specific patch, use the following URL template:
 
 ```
 https://github.com/pfactum/pf-kernel/compare/v<base>...v<base>-pf<release>.diff
