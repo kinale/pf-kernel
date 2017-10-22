@@ -18,12 +18,15 @@ As you may see, it improves interactiveness and performance, saves some memory a
 
 # How to get it?
 
-Latest release is: **v4.13-pf9**
+Latest release is: [**v4.13-pf9**](https://github.com/pfactum/pf-kernel/releases/latest), [patch](https://github.com/pfactum/pf-kernel/compare/v4.13...v4.13-pf9.diff) (_applies to bare kernel only with **no stable patches**_)
 
-* patch: [click](https://github.com/pfactum/pf-kernel/compare/569dbb88e80deb68974ef6fdd6a13edb9d686261...v4.13-pf9.diff) (_applies to bare kernel only with **no stable patches**_)
-* tarball: [click](https://github.com/pfactum/pf-kernel/archive/v4.13-pf9.tar.gz)
+You can also check [full list of all releases](https://github.com/pfactum/pf-kernel/releases).
 
-You can also check [full list of all releases](releases).
+To get specific patch, use this template:
+
+```
+https://github.com/pfactum/pf-kernel/compare/v<base>...v<base>-pf<release>.diff
+```
 
 ## But I want binary builds!
 
