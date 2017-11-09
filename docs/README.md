@@ -10,15 +10,14 @@ Currently, pf-kernel incorporates:
 * [PDS CPU scheduler](https://cchalpha.blogspot.com/)
 * [graysky's GCC patch](https://github.com/graysky2/kernel_gcc_patch)
 * [UKSM](http://kerneldedup.org/en/projects/uksm/) (_also, on [GitHub](https://github.com/dolohow/uksm)_)
-* [blk-mq performance patchset](https://marc.info/?l=linux-block&m=150797307912556&w=2)
-* [blk-mq suspend-to-RAM fix](https://marc.info/?l=linux-block&m=150675195718390&w=2)
+* [blk-mq suspend-to-RAM fix](https://marc.info/?l=linux-block&m=151025341204254&w=2)
 * random fixes here and there
 
 As you may see, it improves interactiveness and performance, saves some memory and fixes nasty bugs.
 
 # How to get it?
 
-Latest release is: [v4.13-pf12](https://github.com/pfactum/pf-kernel/releases/latest), [patch](https://github.com/pfactum/pf-kernel/compare/v4.13...v4.13-pf12.diff) (_applies to bare kernel only with **no stable patches**_)
+Latest release is: [v4.13-pf13](https://github.com/pfactum/pf-kernel/releases/latest), [patch](https://github.com/pfactum/pf-kernel/compare/v4.13...v4.13-pf13.diff) (_applies to bare kernel only with **no stable patches**_)
 
 You can also check [full list of all releases](https://github.com/pfactum/pf-kernel/releases).
 
