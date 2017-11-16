@@ -37,7 +37,7 @@ There are Arch Linux official binaries available for some architectures (_64-bit
 
 ### Where is Fedora, Gentoo etc?
 
-Some unofficial packages are maintainer here:
+Some unofficial packages are maintained here:
 
 * [Gentoo](http://packages.gentoo.org/package/sys-kernel/pf-sources)
 * Fedora [specs](https://github.com/Hubbitus/kernel) and [binaries](http://rpm.hubbitus.info/)
