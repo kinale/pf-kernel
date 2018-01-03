@@ -17,7 +17,7 @@ As you may see, it improves interactiveness and performance, saves some memory a
 
 # How to get it?
 
-Latest release is: [v4.14-pf7](https://github.com/pfactum/pf-kernel/releases/latest), [patch](https://github.com/pfactum/pf-kernel/compare/v4.14...v4.14-pf7.diff) (_applies to bare kernel only with **no stable patches**_)
+Latest release is: [v4.14-pf8](https://github.com/pfactum/pf-kernel/releases/latest), [patch](https://github.com/pfactum/pf-kernel/compare/v4.14...v4.14-pf8.diff) (_applies to bare kernel only with **no stable patches**_)
 
 You can also check [full list of all releases](https://github.com/pfactum/pf-kernel/releases).
 
