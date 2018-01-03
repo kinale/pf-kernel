@@ -11,6 +11,7 @@ Currently, pf-kernel incorporates:
 * [graysky's GCC patch](https://github.com/graysky2/kernel_gcc_patch)
 * [UKSM](http://kerneldedup.org/en/projects/uksm/) (_also, on [GitHub](https://github.com/dolohow/uksm)_)
 * [blk-mq suspend-to-RAM fix](https://marc.info/?l=linux-block&m=151025341204254&w=2)
+* [BFQ improvements](https://groups.google.com/forum/#!forum/bfq-iosched)
 * random fixes here and there
 
 As you may see, it improves interactiveness and performance, saves some memory and fixes nasty bugs.
