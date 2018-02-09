@@ -2,6 +2,8 @@
 
 **pf-kernel** is a desktop-oriented Linux kernel fork. Its name is by **no means** related to BSD Packet Filter. "pf" stands for "post-factum", the author's nickname.
 
+[Follow @pfkernel](https://twitter.com/pfkernel)
+
 # OK, what's there in your patchset?
 
 Currently, pf-kernel incorporates:
