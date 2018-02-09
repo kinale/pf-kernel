@@ -31,9 +31,9 @@ https://github.com/pfactum/pf-kernel/compare/v<base>...v<base>-pf<release>.diff
 
 There are Arch Linux official binaries available for some architectures (_64-bit only_):
 
-* [generic](https://build.opensuse.org/package/show/home:post-factum/linux-pf-generic)
-* [Intel Silvermont](https://build.opensuse.org/package/show/home:post-factum/linux-pf-silvermont)
-* [Intel Skylake](https://build.opensuse.org/package/show/home:post-factum/linux-pf-skylake)
+* [generic](https://build.opensuse.org/package/show/home:post-factum:kernels/linux-pf-generic)
+* [Intel Silvermont](https://build.opensuse.org/package/show/home:post-factum:kernels/linux-pf-silvermont)
+* [Intel Skylake](https://build.opensuse.org/package/show/home:post-factum:kernels/linux-pf-skylake)
 
 ### Where is Fedora, Gentoo etc?
 
