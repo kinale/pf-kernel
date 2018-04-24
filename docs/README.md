@@ -19,7 +19,7 @@ As you may see, it improves interactiveness and performance, saves some memory a
 
 # How to get it?
 
-Latest release is: [v4.16-pf3](https://github.com/pfactum/pf-kernel/releases/latest), [patch](https://github.com/pfactum/pf-kernel/compare/v4.16...v4.16-pf3.diff) (_applies to bare kernel only with **no stable patches**_)
+Latest release is: [v4.16-pf4](https://github.com/pfactum/pf-kernel/releases/latest), [patch](https://github.com/pfactum/pf-kernel/compare/v4.16...v4.16-pf4.diff) (_applies to bare kernel only with **no stable patches**_)
 
 You can also check [full list of all releases](https://github.com/pfactum/pf-kernel/releases).
 
