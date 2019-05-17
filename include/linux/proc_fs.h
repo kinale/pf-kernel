@@ -140,4 +140,12 @@ static inline struct pid_namespace *proc_pid_ns(const struct inode *inode)
 	return inode->i_sb->s_fs_info;
 }
 
+static inline struct pid *pidfd_to_pid(const struct file *file)
+{
+	if (file->f_op == &pidfd_fops)
+		return file->private_data;
+
+	return tgid_pidfd_to_pid(file);
+}
+
 #endif /* _LINUX_PROC_FS_H */

@@ -3609,14 +3609,6 @@ static int copy_siginfo_from_user_any(kernel_siginfo_t *kinfo, siginfo_t *info)
 	return copy_siginfo_from_user(kinfo, info);
 }
 
-static struct pid *pidfd_to_pid(const struct file *file)
-{
-	if (file->f_op == &pidfd_fops)
-		return file->private_data;
-
-	return tgid_pidfd_to_pid(file);
-}
-
 /**
  * sys_pidfd_send_signal - send a signal to a process through a task file
  *                          descriptor
