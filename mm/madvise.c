@@ -24,6 +24,8 @@
 #include <linux/swapops.h>
 #include <linux/shmem_fs.h>
 #include <linux/mmu_notifier.h>
+#include <linux/proc_fs.h>
+#include <linux/sched/mm.h>
 
 #include <asm/tlb.h>
 
@@ -839,6 +841,8 @@ static long madvise_common(struct mm_struct* mm, unsigned long start,
 	if (write) {
 		if (down_write_killable(&mm->mmap_sem))
 			return -EINTR;
+		if (current->mm != mm && !mmget_still_valid(mm))
+			goto skip_mm;
 	} else {
 		down_read(&mm->mmap_sem);
 	}
@@ -889,6 +893,8 @@ static long madvise_common(struct mm_struct* mm, unsigned long start,
 	}
 out:
 	blk_finish_plug(&plug);
+
+skip_mm:
 	if (write)
 		up_write(&mm->mmap_sem);
 	else
@@ -900,4 +906,63 @@ out:
 SYSCALL_DEFINE3(madvise, unsigned long, start, size_t, len_in, int, behavior)
 {
 	return madvise_common(current->mm, start, len_in, behavior);
+}
+
+static int madvise_remote_possible(int behavior)
+{
+	switch (behavior) {
+	case MADV_MERGEABLE:
+	case MADV_UNMERGEABLE:
+		return 1;
+	default:
+		/*
+		 * MADV_HWPOISON and MADV_SOFT_OFFLINE use get_user_pages_fast(),
+		 * which should be replaced with get_user_pages_remote()
+		 *
+		 * MADV_REMOVE and MADV_DONTNEED operate on current directly
+		 */
+		return 0;
+	}
+}
+
+SYSCALL_DEFINE4(pidfd_madvise, int, pidfd, unsigned long, start, size_t, len_in, int, behavior)
+{
+	int ret;
+	struct fd f;
+	struct pid *pid;
+	struct task_struct *task;
+	struct mm_struct *mm = ERR_PTR(-ESRCH);
+
+	if (!madvise_remote_possible(behavior))
+		return -EINVAL;
+
+	f = fdget(pidfd);
+	if (!f.file)
+		return -EBADF;
+
+	pid = pidfd_to_pid(f.file);
+	if (IS_ERR(pid)) {
+		ret = PTR_ERR(pid);
+		goto err;
+	}
+
+	task = get_pid_task(pid, PIDTYPE_TGID);
+	if (task) {
+		mm = mm_access(task, PTRACE_MODE_ATTACH_FSCREDS);
+		put_task_struct(task);
+	}
+
+	if (IS_ERR(mm)) {
+		ret = PTR_ERR(mm);
+		goto err;
+	}
+
+	ret = madvise_common(mm, start, len_in, behavior);
+
+	mmput(mm);
+
+err:
+	fdput(f);
+
+	return ret;
 }

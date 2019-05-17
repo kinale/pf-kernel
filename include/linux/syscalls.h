@@ -997,6 +997,8 @@ asmlinkage long sys_fspick(int dfd, const char __user *path, unsigned int flags)
 asmlinkage long sys_pidfd_send_signal(int pidfd, int sig,
 				       siginfo_t __user *info,
 				       unsigned int flags);
+asmlinkage long sys_pidfd_madvise(int pidfd, void *addr,
+				  size_t length, int advice);
 
 /*
  * Architecture-specific system calls
