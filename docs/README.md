@@ -1,1 +1,1 @@
-The project [has been moved to the Codeberg](https://codeberg.org/post-factum/pf-kernel/wiki/README).
+The project [has been moved to the Codeberg](https://codeberg.org/pf-kernel/linux/wiki/README).
